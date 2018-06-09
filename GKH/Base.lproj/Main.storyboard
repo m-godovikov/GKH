@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tarif View Controller-->
+        <scene sceneID="UGL-QB-XmH">
+            <objects>
+                <viewController id="TOr-Xn-hWM" customClass="TarifViewController" customModule="GKH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1XA-6i-oaL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SA8-WY-tOp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Тарифы" id="vO6-s1-Lp8">
+                                        <barButtonItem key="leftBarButtonItem" title="Назад" id="xcj-0d-IQA">
+                                            <connections>
+                                                <action selector="backTapped" destination="TOr-Xn-hWM" id="5Tn-xc-hXa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SA8-WY-tOp" firstAttribute="leading" secondItem="u0b-r0-KBn" secondAttribute="leading" id="KBf-8T-hgP"/>
+                            <constraint firstItem="SA8-WY-tOp" firstAttribute="top" secondItem="u0b-r0-KBn" secondAttribute="top" id="Zr6-8g-jOH"/>
+                            <constraint firstAttribute="trailing" secondItem="SA8-WY-tOp" secondAttribute="trailing" id="qSj-c2-ISa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u0b-r0-KBn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRo-XO-JxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="815"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="GKH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUj-VC-Euw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="ЖКХ" id="fE5-JU-NIx">
+                                        <barButtonItem key="leftBarButtonItem" title="Тариф" id="ZMw-pI-nLu">
+                                            <connections>
+                                                <segue destination="TOr-Xn-hWM" kind="presentation" identifier="tarif" id="woI-Jd-UhS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="q20-LC-vOa">
+                                            <connections>
+                                                <segue destination="Pe2-kh-9tA" kind="presentation" identifier="client" id="XrD-wK-Eh3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yUj-VC-Euw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Cle-gn-3Of"/>
+                            <constraint firstItem="yUj-VC-Euw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PbL-Ty-su4"/>
+                            <constraint firstItem="yUj-VC-Euw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u8d-lG-rSv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Client View Controller-->
+        <scene sceneID="1m0-g8-T4n">
+            <objects>
+                <viewController id="Pe2-kh-9tA" customClass="ClientViewController" customModule="GKH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CWH-yG-w9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Baf-iY-6eS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Введите показания" id="12c-bj-BCw">
+                                        <barButtonItem key="leftBarButtonItem" title="Назад" id="jC5-as-ZQH">
+                                            <connections>
+                                                <action selector="backTapped" destination="Pe2-kh-9tA" id="lb6-JM-Vzo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Baf-iY-6eS" secondAttribute="trailing" id="MFs-Bq-u1E"/>
+                            <constraint firstItem="Baf-iY-6eS" firstAttribute="top" secondItem="eoO-0n-PTz" secondAttribute="top" id="Xtb-9a-t1C"/>
+                            <constraint firstItem="Baf-iY-6eS" firstAttribute="leading" secondItem="eoO-0n-PTz" secondAttribute="leading" id="e7H-52-tvG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eoO-0n-PTz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLv-Js-3Kw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530" y="34"/>
         </scene>
     </scenes>
 </document>
