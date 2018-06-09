@@ -16,6 +16,10 @@
 		4137BE9F20CBD2000003BFB5 /* TarifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BE9E20CBD2000003BFB5 /* TarifViewController.swift */; };
 		4137BEA220CBE14E0003BFB5 /* Tarif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA120CBE14E0003BFB5 /* Tarif.swift */; };
 		4137BEA420CBE1C70003BFB5 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA320CBE1C70003BFB5 /* Client.swift */; };
+		4137BEA620CC13D90003BFB5 /* FIeldTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA520CC13D90003BFB5 /* FIeldTextInput.swift */; };
+		4137BEA820CC15850003BFB5 /* FieldImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA720CC15850003BFB5 /* FieldImages.swift */; };
+		4137BEAA20CC16120003BFB5 /* FieldSaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA920CC16120003BFB5 /* FieldSaveButton.swift */; };
+		4137BEAD20CC1C0F0003BFB5 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEAC20CC1C0F0003BFB5 /* ClientModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		4137BE9E20CBD2000003BFB5 /* TarifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarifViewController.swift; sourceTree = "<group>"; };
 		4137BEA120CBE14E0003BFB5 /* Tarif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarif.swift; sourceTree = "<group>"; };
 		4137BEA320CBE1C70003BFB5 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		4137BEA520CC13D90003BFB5 /* FIeldTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIeldTextInput.swift; sourceTree = "<group>"; };
+		4137BEA720CC15850003BFB5 /* FieldImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldImages.swift; sourceTree = "<group>"; };
+		4137BEA920CC16120003BFB5 /* FieldSaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSaveButton.swift; sourceTree = "<group>"; };
+		4137BEAC20CC1C0F0003BFB5 /* ClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 		4137BE8920CBD0DB0003BFB5 /* GKH */ = {
 			isa = PBXGroup;
 			children = (
+				4137BEAB20CC1BAB0003BFB5 /* Cells */,
 				4137BEA020CBE12A0003BFB5 /* Models */,
 				4137BE8A20CBD0DB0003BFB5 /* AppDelegate.swift */,
 				4137BE8C20CBD0DB0003BFB5 /* MainViewController.swift */,
@@ -80,8 +89,19 @@
 			children = (
 				4137BEA120CBE14E0003BFB5 /* Tarif.swift */,
 				4137BEA320CBE1C70003BFB5 /* Client.swift */,
+				4137BEA520CC13D90003BFB5 /* FIeldTextInput.swift */,
+				4137BEA720CC15850003BFB5 /* FieldImages.swift */,
+				4137BEA920CC16120003BFB5 /* FieldSaveButton.swift */,
+				4137BEAC20CC1C0F0003BFB5 /* ClientModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4137BEAB20CC1BAB0003BFB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,11 +175,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4137BEA620CC13D90003BFB5 /* FIeldTextInput.swift in Sources */,
 				4137BE8D20CBD0DB0003BFB5 /* MainViewController.swift in Sources */,
+				4137BEAD20CC1C0F0003BFB5 /* ClientModel.swift in Sources */,
 				4137BE9F20CBD2000003BFB5 /* TarifViewController.swift in Sources */,
+				4137BEAA20CC16120003BFB5 /* FieldSaveButton.swift in Sources */,
 				4137BEA420CBE1C70003BFB5 /* Client.swift in Sources */,
 				4137BE8B20CBD0DB0003BFB5 /* AppDelegate.swift in Sources */,
 				4137BE9D20CBD1E00003BFB5 /* ClientViewController.swift in Sources */,
+				4137BEA820CC15850003BFB5 /* FieldImages.swift in Sources */,
 				4137BEA220CBE14E0003BFB5 /* Tarif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

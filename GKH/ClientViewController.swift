@@ -15,6 +15,8 @@ class ClientViewController: UIViewController {
     
     var addClient: ((_ newClient: Client) -> Void)? = nil
     
+    private let model = ClientModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

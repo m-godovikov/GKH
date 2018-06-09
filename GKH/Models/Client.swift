@@ -22,6 +22,7 @@ class Client: NSObject {
         self.cold = cold
         self.hot = hot
         self.electricity = electricity
+        super.init()
     }
     
 }
