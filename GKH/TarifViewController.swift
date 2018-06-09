@@ -14,7 +14,7 @@ class TarifViewController: UIViewController {
     @IBOutlet weak var coldLabel: UITextField!
     @IBOutlet weak var electricityLabel: UITextField!
     
-    @IBAction func backTapped() {
+    @IBAction func goBack() {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
@@ -23,7 +23,7 @@ class TarifViewController: UIViewController {
             tarif.cold = cold
             tarif.hot = hot
             tarif.electricity = electricity
-            presentingViewController?.dismiss(animated: true, completion: nil)
+            goBack()
         } else {
             let alertController = UIAlertController(title: "Ошибка", message:
                 "Проверьте введенные данные", preferredStyle: UIAlertControllerStyle.alert)

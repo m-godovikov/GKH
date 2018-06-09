@@ -20,6 +20,10 @@
 		4137BEA820CC15850003BFB5 /* FieldImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA720CC15850003BFB5 /* FieldImages.swift */; };
 		4137BEAA20CC16120003BFB5 /* FieldSaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA920CC16120003BFB5 /* FieldSaveButton.swift */; };
 		4137BEAD20CC1C0F0003BFB5 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEAC20CC1C0F0003BFB5 /* ClientModel.swift */; };
+		4137BEB020CC212C0003BFB5 /* CellTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEAE20CC212C0003BFB5 /* CellTextInput.swift */; };
+		4137BEB120CC212C0003BFB5 /* CellTextInput.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4137BEAF20CC212C0003BFB5 /* CellTextInput.xib */; };
+		4137BEB420CC37590003BFB5 /* CellSaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEB220CC37590003BFB5 /* CellSaveButton.swift */; };
+		4137BEB520CC37590003BFB5 /* CellSaveButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4137BEB320CC37590003BFB5 /* CellSaveButton.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		4137BEA720CC15850003BFB5 /* FieldImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldImages.swift; sourceTree = "<group>"; };
 		4137BEA920CC16120003BFB5 /* FieldSaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSaveButton.swift; sourceTree = "<group>"; };
 		4137BEAC20CC1C0F0003BFB5 /* ClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
+		4137BEAE20CC212C0003BFB5 /* CellTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTextInput.swift; sourceTree = "<group>"; };
+		4137BEAF20CC212C0003BFB5 /* CellTextInput.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTextInput.xib; sourceTree = "<group>"; };
+		4137BEB220CC37590003BFB5 /* CellSaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSaveButton.swift; sourceTree = "<group>"; };
+		4137BEB320CC37590003BFB5 /* CellSaveButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellSaveButton.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 		4137BEAB20CC1BAB0003BFB5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4137BEAE20CC212C0003BFB5 /* CellTextInput.swift */,
+				4137BEAF20CC212C0003BFB5 /* CellTextInput.xib */,
+				4137BEB220CC37590003BFB5 /* CellSaveButton.swift */,
+				4137BEB320CC37590003BFB5 /* CellSaveButton.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -165,6 +177,8 @@
 				4137BE9520CBD0DC0003BFB5 /* LaunchScreen.storyboard in Resources */,
 				4137BE9220CBD0DC0003BFB5 /* Assets.xcassets in Resources */,
 				4137BE9020CBD0DB0003BFB5 /* Main.storyboard in Resources */,
+				4137BEB520CC37590003BFB5 /* CellSaveButton.xib in Resources */,
+				4137BEB120CC212C0003BFB5 /* CellTextInput.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,11 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4137BEB020CC212C0003BFB5 /* CellTextInput.swift in Sources */,
 				4137BEA620CC13D90003BFB5 /* FIeldTextInput.swift in Sources */,
 				4137BE8D20CBD0DB0003BFB5 /* MainViewController.swift in Sources */,
 				4137BEAD20CC1C0F0003BFB5 /* ClientModel.swift in Sources */,
 				4137BE9F20CBD2000003BFB5 /* TarifViewController.swift in Sources */,
 				4137BEAA20CC16120003BFB5 /* FieldSaveButton.swift in Sources */,
+				4137BEB420CC37590003BFB5 /* CellSaveButton.swift in Sources */,
 				4137BEA420CBE1C70003BFB5 /* Client.swift in Sources */,
 				4137BE8B20CBD0DB0003BFB5 /* AppDelegate.swift in Sources */,
 				4137BE9D20CBD1E00003BFB5 /* ClientViewController.swift in Sources */,

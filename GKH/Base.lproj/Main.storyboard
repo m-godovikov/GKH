@@ -24,7 +24,7 @@
                                     <navigationItem title="Тарифы" id="vO6-s1-Lp8">
                                         <barButtonItem key="leftBarButtonItem" title="Назад" id="xcj-0d-IQA">
                                             <connections>
-                                                <action selector="backTapped" destination="TOr-Xn-hWM" id="5Tn-xc-hXa"/>
+                                                <action selector="goBack" destination="TOr-Xn-hWM" id="5Tn-xc-hXa"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -164,21 +164,32 @@
                                     <navigationItem title="Введите показания" id="12c-bj-BCw">
                                         <barButtonItem key="leftBarButtonItem" title="Назад" id="jC5-as-ZQH">
                                             <connections>
-                                                <action selector="backTapped" destination="Pe2-kh-9tA" id="lb6-JM-Vzo"/>
+                                                <action selector="goBack" destination="Pe2-kh-9tA" id="lb6-JM-Vzo"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="geM-Wi-Ob5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="eoO-0n-PTz" firstAttribute="trailing" secondItem="geM-Wi-Ob5" secondAttribute="trailing" id="Ax3-Ds-poN"/>
+                            <constraint firstItem="geM-Wi-Ob5" firstAttribute="leading" secondItem="eoO-0n-PTz" secondAttribute="leading" id="KSv-rR-Jn1"/>
                             <constraint firstAttribute="trailing" secondItem="Baf-iY-6eS" secondAttribute="trailing" id="MFs-Bq-u1E"/>
+                            <constraint firstItem="geM-Wi-Ob5" firstAttribute="top" secondItem="Baf-iY-6eS" secondAttribute="bottom" id="O4W-hd-2Jq"/>
                             <constraint firstItem="Baf-iY-6eS" firstAttribute="top" secondItem="eoO-0n-PTz" secondAttribute="top" id="Xtb-9a-t1C"/>
                             <constraint firstItem="Baf-iY-6eS" firstAttribute="leading" secondItem="eoO-0n-PTz" secondAttribute="leading" id="e7H-52-tvG"/>
+                            <constraint firstItem="eoO-0n-PTz" firstAttribute="bottom" secondItem="geM-Wi-Ob5" secondAttribute="bottom" id="zFt-3d-xCx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eoO-0n-PTz"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="geM-Wi-Ob5" id="tgf-Ut-4OB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLv-Js-3Kw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
