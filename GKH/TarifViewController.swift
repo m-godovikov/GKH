@@ -13,5 +13,6 @@ class TarifViewController: UIViewController {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
+    var updateTarif: ((_ newTarif: Tarif) -> Void)? = nil
 
 }

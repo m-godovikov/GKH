@@ -10,6 +10,31 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-
+    private let tarif = Tarif()
+    private let clients = NSMutableArray()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
 }
 
+extension MainViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "client"{
+            let secondVC = segue.destination as! ClientViewController
+            secondVC.addClient = {(newClient) -> Void in
+                self.clients.add(newClient)
+            }
+        } else if segue.identifier == "tarif"{
+            let secondVC = segue.destination as! TarifViewController
+            secondVC.updateTarif = {(newTarif) -> Void in
+                self.tarif.cold = newTarif.cold
+                self.tarif.hot = newTarif.hot
+                self.tarif.electricity = newTarif.electricity
+            }
+        }
+
+    }
+}

@@ -14,6 +14,8 @@
 		4137BE9520CBD0DC0003BFB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4137BE9320CBD0DC0003BFB5 /* LaunchScreen.storyboard */; };
 		4137BE9D20CBD1E00003BFB5 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BE9C20CBD1E00003BFB5 /* ClientViewController.swift */; };
 		4137BE9F20CBD2000003BFB5 /* TarifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BE9E20CBD2000003BFB5 /* TarifViewController.swift */; };
+		4137BEA220CBE14E0003BFB5 /* Tarif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA120CBE14E0003BFB5 /* Tarif.swift */; };
+		4137BEA420CBE1C70003BFB5 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA320CBE1C70003BFB5 /* Client.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4137BE9620CBD0DC0003BFB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4137BE9C20CBD1E00003BFB5 /* ClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
 		4137BE9E20CBD2000003BFB5 /* TarifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarifViewController.swift; sourceTree = "<group>"; };
+		4137BEA120CBE14E0003BFB5 /* Tarif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarif.swift; sourceTree = "<group>"; };
+		4137BEA320CBE1C70003BFB5 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		4137BE8920CBD0DB0003BFB5 /* GKH */ = {
 			isa = PBXGroup;
 			children = (
+				4137BEA020CBE12A0003BFB5 /* Models */,
 				4137BE8A20CBD0DB0003BFB5 /* AppDelegate.swift */,
 				4137BE8C20CBD0DB0003BFB5 /* MainViewController.swift */,
 				4137BE8E20CBD0DB0003BFB5 /* Main.storyboard */,
@@ -68,6 +73,15 @@
 				4137BE9620CBD0DC0003BFB5 /* Info.plist */,
 			);
 			path = GKH;
+			sourceTree = "<group>";
+		};
+		4137BEA020CBE12A0003BFB5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4137BEA120CBE14E0003BFB5 /* Tarif.swift */,
+				4137BEA320CBE1C70003BFB5 /* Client.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +157,10 @@
 			files = (
 				4137BE8D20CBD0DB0003BFB5 /* MainViewController.swift in Sources */,
 				4137BE9F20CBD2000003BFB5 /* TarifViewController.swift in Sources */,
+				4137BEA420CBE1C70003BFB5 /* Client.swift in Sources */,
 				4137BE8B20CBD0DB0003BFB5 /* AppDelegate.swift in Sources */,
 				4137BE9D20CBD1E00003BFB5 /* ClientViewController.swift in Sources */,
+				4137BEA220CBE14E0003BFB5 /* Tarif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

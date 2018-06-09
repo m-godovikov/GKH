@@ -13,5 +13,10 @@ class ClientViewController: UIViewController {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-
+    var addClient: ((_ newClient: Client) -> Void)? = nil
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }
