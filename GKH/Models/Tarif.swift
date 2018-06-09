@@ -9,7 +9,7 @@
 import UIKit
 
 class Tarif: NSObject {
-    var cold = "2.5"
-    var hot = "3.5"
-    var electricity = "4.5"
+    var cold = 2.5
+    var hot = 3.5
+    var electricity = 4.5
 }
