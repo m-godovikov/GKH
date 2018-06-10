@@ -14,7 +14,6 @@ class ClientModel: NSObject {
     private let hotField = FIeldTextInput(placeHolder: "Горячая вода, куб. м.", value: "")
     private let electricityField = FIeldTextInput(placeHolder: "Электричество, кВт*ч", value: "")
     private let photoField = FieldImages(image1: nil, image2: nil)
-    
     let fields = NSMutableArray()
     
     override init() {
@@ -23,10 +22,9 @@ class ClientModel: NSObject {
         fields.add(coldField)
         fields.add(hotField)
         fields.add(electricityField)
-        //        fields.add(photoField)
+        fields.add(photoField)
         fields.add(FieldSaveButton())
     }
-    
     
     func getClient() -> Client? {
         if let cold = Int(coldField.value), let hot = Int(hotField.value), let electricity = Int(electricityField.value){
