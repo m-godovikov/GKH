@@ -26,9 +26,9 @@ class ClientModel: NSObject {
         fields.add(FieldSaveButton())
     }
     
-    func getClient() -> Client? {
+    func getClient() -> ClientData? {
         if let cold = Int(coldField.value), let hot = Int(hotField.value), let electricity = Int(electricityField.value){
-            let client = Client(address: addressField.value, cold: cold, hot: hot, electricity: electricity)
+            let client = ClientData(date: Date(), address: addressField.value, cold: cold, hot: hot, electricity: electricity)
             client.photo1 = photoField.image1
             client.photo2 = photoField.image2
             return client

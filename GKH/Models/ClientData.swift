@@ -8,7 +8,8 @@
 
 import UIKit
 
-class Client: NSObject {
+class ClientData: NSObject {
+    let date: Date
     let address: String
     let cold: Int
     let hot: Int
@@ -17,7 +18,8 @@ class Client: NSObject {
     var photo1: UIImage?
     var photo2: UIImage?
     
-    init(address: String, cold: Int, hot: Int, electricity: Int) {
+    init(date: Date, address: String, cold: Int, hot: Int, electricity: Int) {
+        self.date = date
         self.address = address
         self.cold = cold
         self.hot = hot

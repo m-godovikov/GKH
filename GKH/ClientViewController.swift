@@ -26,7 +26,7 @@ class ClientViewController: UIViewController {
     let imagePicker = UIImagePickerController()
     
     
-    var addClient: ((_ newClient: Client) -> Void)!
+    var addClient: ((_ newClient: ClientData) -> Void)!
     private var photoImageView: UIImageView? = nil
     
     private let model = ClientModel()
@@ -118,7 +118,6 @@ extension ClientViewController: UIImagePickerControllerDelegate, UINavigationCon
             let alertController = UIAlertController(title: "Упс", message:
                 "Не могу найти камеру.", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "Ок", style: UIAlertActionStyle.default,handler: nil))
-            
             self.present(alertController, animated: true, completion: nil)
         }
     }

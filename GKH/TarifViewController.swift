@@ -23,6 +23,7 @@ class TarifViewController: UIViewController {
             tarif.cold = cold
             tarif.hot = hot
             tarif.electricity = electricity
+            update()
             goBack()
         } else {
             let alertController = UIAlertController(title: "Ошибка", message:
@@ -32,6 +33,9 @@ class TarifViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
     }
+    
+    var update: (() -> Void)!
+
     
     var tarif: Tarif!
     

@@ -15,7 +15,7 @@
 		4137BE9D20CBD1E00003BFB5 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BE9C20CBD1E00003BFB5 /* ClientViewController.swift */; };
 		4137BE9F20CBD2000003BFB5 /* TarifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BE9E20CBD2000003BFB5 /* TarifViewController.swift */; };
 		4137BEA220CBE14E0003BFB5 /* Tarif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA120CBE14E0003BFB5 /* Tarif.swift */; };
-		4137BEA420CBE1C70003BFB5 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA320CBE1C70003BFB5 /* Client.swift */; };
+		4137BEA420CBE1C70003BFB5 /* ClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA320CBE1C70003BFB5 /* ClientData.swift */; };
 		4137BEA620CC13D90003BFB5 /* FIeldTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA520CC13D90003BFB5 /* FIeldTextInput.swift */; };
 		4137BEA820CC15850003BFB5 /* FieldImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA720CC15850003BFB5 /* FieldImages.swift */; };
 		4137BEAA20CC16120003BFB5 /* FieldSaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEA920CC16120003BFB5 /* FieldSaveButton.swift */; };
@@ -26,6 +26,9 @@
 		4137BEB520CC37590003BFB5 /* CellSaveButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4137BEB320CC37590003BFB5 /* CellSaveButton.xib */; };
 		4137BEB820CC537B0003BFB5 /* CellImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEB620CC537B0003BFB5 /* CellImages.swift */; };
 		4137BEB920CC537B0003BFB5 /* CellImages.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4137BEB720CC537B0003BFB5 /* CellImages.xib */; };
+		4137BEBC20CD11AE0003BFB5 /* CellClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137BEBA20CD11AE0003BFB5 /* CellClient.swift */; };
+		4137BEBD20CD11AE0003BFB5 /* CellClient.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4137BEBB20CD11AE0003BFB5 /* CellClient.xib */; };
+		419CB74320CEB0E0007881D2 /* ClientMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419CB74220CEB0E0007881D2 /* ClientMoney.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +42,7 @@
 		4137BE9C20CBD1E00003BFB5 /* ClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
 		4137BE9E20CBD2000003BFB5 /* TarifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarifViewController.swift; sourceTree = "<group>"; };
 		4137BEA120CBE14E0003BFB5 /* Tarif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarif.swift; sourceTree = "<group>"; };
-		4137BEA320CBE1C70003BFB5 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		4137BEA320CBE1C70003BFB5 /* ClientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientData.swift; sourceTree = "<group>"; };
 		4137BEA520CC13D90003BFB5 /* FIeldTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIeldTextInput.swift; sourceTree = "<group>"; };
 		4137BEA720CC15850003BFB5 /* FieldImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldImages.swift; sourceTree = "<group>"; };
 		4137BEA920CC16120003BFB5 /* FieldSaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSaveButton.swift; sourceTree = "<group>"; };
@@ -50,6 +53,9 @@
 		4137BEB320CC37590003BFB5 /* CellSaveButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellSaveButton.xib; sourceTree = "<group>"; };
 		4137BEB620CC537B0003BFB5 /* CellImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellImages.swift; sourceTree = "<group>"; };
 		4137BEB720CC537B0003BFB5 /* CellImages.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellImages.xib; sourceTree = "<group>"; };
+		4137BEBA20CD11AE0003BFB5 /* CellClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellClient.swift; sourceTree = "<group>"; };
+		4137BEBB20CD11AE0003BFB5 /* CellClient.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellClient.xib; sourceTree = "<group>"; };
+		419CB74220CEB0E0007881D2 /* ClientMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMoney.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				4137BEA120CBE14E0003BFB5 /* Tarif.swift */,
-				4137BEA320CBE1C70003BFB5 /* Client.swift */,
+				4137BEA320CBE1C70003BFB5 /* ClientData.swift */,
 				4137BEA520CC13D90003BFB5 /* FIeldTextInput.swift */,
 				4137BEA720CC15850003BFB5 /* FieldImages.swift */,
 				4137BEA920CC16120003BFB5 /* FieldSaveButton.swift */,
 				4137BEAC20CC1C0F0003BFB5 /* ClientModel.swift */,
+				419CB74220CEB0E0007881D2 /* ClientMoney.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,6 +125,8 @@
 				4137BEB320CC37590003BFB5 /* CellSaveButton.xib */,
 				4137BEB620CC537B0003BFB5 /* CellImages.swift */,
 				4137BEB720CC537B0003BFB5 /* CellImages.xib */,
+				4137BEBA20CD11AE0003BFB5 /* CellClient.swift */,
+				4137BEBB20CD11AE0003BFB5 /* CellClient.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -185,6 +194,7 @@
 				4137BE9020CBD0DB0003BFB5 /* Main.storyboard in Resources */,
 				4137BEB920CC537B0003BFB5 /* CellImages.xib in Resources */,
 				4137BEB520CC37590003BFB5 /* CellSaveButton.xib in Resources */,
+				4137BEBD20CD11AE0003BFB5 /* CellClient.xib in Resources */,
 				4137BEB120CC212C0003BFB5 /* CellTextInput.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,10 +210,12 @@
 				4137BEA620CC13D90003BFB5 /* FIeldTextInput.swift in Sources */,
 				4137BE8D20CBD0DB0003BFB5 /* MainViewController.swift in Sources */,
 				4137BEAD20CC1C0F0003BFB5 /* ClientModel.swift in Sources */,
+				4137BEBC20CD11AE0003BFB5 /* CellClient.swift in Sources */,
 				4137BE9F20CBD2000003BFB5 /* TarifViewController.swift in Sources */,
 				4137BEAA20CC16120003BFB5 /* FieldSaveButton.swift in Sources */,
+				419CB74320CEB0E0007881D2 /* ClientMoney.swift in Sources */,
 				4137BEB420CC37590003BFB5 /* CellSaveButton.swift in Sources */,
-				4137BEA420CBE1C70003BFB5 /* Client.swift in Sources */,
+				4137BEA420CBE1C70003BFB5 /* ClientData.swift in Sources */,
 				4137BE8B20CBD0DB0003BFB5 /* AppDelegate.swift in Sources */,
 				4137BE9D20CBD1E00003BFB5 /* ClientViewController.swift in Sources */,
 				4137BEB820CC537B0003BFB5 /* CellImages.swift in Sources */,
