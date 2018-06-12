@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ClientViewController: UIViewController {
+class ClientViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var bottomHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBAction func goBack() {
         presentingViewController?.dismiss(animated: true, completion: nil)
@@ -25,14 +26,20 @@ class ClientViewController: UIViewController {
     
     let imagePicker = UIImagePickerController()
     
+    var focusedIndexPath: IndexPath? = nil
+
     
     var addClient: ((_ newClient: ClientData) -> Void)!
-    private var photoImageView: UIImageView? = nil
+    private var photoImageHolder: ImageHolder? = nil
     
     private let model = ClientModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ClientViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ClientViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
         
         imagePicker.delegate = self
         
@@ -57,6 +64,9 @@ extension ClientViewController: UITableViewDataSource {
         if let textField = field as? FIeldTextInput{
             let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIER_TEXT, for: indexPath) as! CellTextInput
             cell.fieldModel = textField
+            cell.onFocus = {(focusedIndexPath) in
+                self.focusedIndexPath = focusedIndexPath
+            }
             return cell
         } else if field is FieldSaveButton{
             let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIER_SAVE_BUTTON, for: indexPath) as! CellSaveButton
@@ -65,6 +75,7 @@ extension ClientViewController: UITableViewDataSource {
         } else if field is FieldImages{
             let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIER_IMAGES, for: indexPath) as! CellImages
             cell.clickListener = pickImage
+            cell.field = field as! FieldImages
             return cell
         }
         
@@ -75,6 +86,7 @@ extension ClientViewController: UITableViewDataSource {
 extension ClientViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        view.endEditing(true)
     }
 }
 
@@ -97,19 +109,19 @@ extension ClientViewController{
 extension ClientViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            photoImageView?.image = pickedImage
+            photoImageHolder?.image = pickedImage
         }
-        photoImageView = nil
+        photoImageHolder = nil
         dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        photoImageView = nil
+        photoImageHolder = nil
         dismiss(animated: true, completion: nil)
     }
     
-    func pickImage(_ photoImageView: UIImageView){
-        self.photoImageView = photoImageView
+    func pickImage(_ photoImageHolder: ImageHolder){
+        self.photoImageHolder = photoImageHolder
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.allowsEditing = false
             imagePicker.sourceType = .camera
@@ -121,5 +133,21 @@ extension ClientViewController: UIImagePickerControllerDelegate, UINavigationCon
             self.present(alertController, animated: true, completion: nil)
         }
     }
+}
+
+extension ClientViewController {
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            self.tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
+            if let path = focusedIndexPath {
+                self.tableView.scrollToRow(at: path, at: .middle, animated: true)
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.tableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
+    }
+    
 }
 

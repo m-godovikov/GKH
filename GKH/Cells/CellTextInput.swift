@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CellTextInput: UITableViewCell {
+class CellTextInput: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var placeHolderLabel: UILabel!
     @IBOutlet weak var valueTextField: UITextField!
@@ -19,11 +19,14 @@ class CellTextInput: UITableViewCell {
             valueTextField.text = fieldModel.value
         }
     }
+    
+    var onFocus: ((IndexPath?) -> Void)? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         valueTextField.addTarget(self, action: #selector(CellTextInput.valueHasChanged(_:)), for: UIControlEvents.editingChanged)
-
+        valueTextField.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,4 +39,24 @@ class CellTextInput: UITableViewCell {
         fieldModel.value = valueTextField.text ?? ""
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        onFocus?(indexPath)
+    }
+}
+
+extension UITableViewCell {
+    
+    var tableView: UITableView? {
+        return next(UITableView.self)
+    }
+    
+    var indexPath: IndexPath? {
+        return tableView?.indexPath(for: self)
+    }
+}
+extension UIResponder {
+    
+    func next<T: UIResponder>(_ type: T.Type) -> T? {
+        return next as? T ?? next?.next(type)
+    }
 }
