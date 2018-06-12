@@ -9,7 +9,6 @@
 import UIKit
 
 class ClientViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var bottomHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBAction func goBack() {
         presentingViewController?.dismiss(animated: true, completion: nil)

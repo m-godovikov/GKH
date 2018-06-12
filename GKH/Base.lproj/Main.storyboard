@@ -185,31 +185,20 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pmp-g3-0l3">
-                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" id="os4-4n-tZv"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eoO-0n-PTz" firstAttribute="trailing" secondItem="geM-Wi-Ob5" secondAttribute="trailing" id="Ax3-Ds-poN"/>
                             <constraint firstItem="geM-Wi-Ob5" firstAttribute="leading" secondItem="eoO-0n-PTz" secondAttribute="leading" id="KSv-rR-Jn1"/>
                             <constraint firstAttribute="trailing" secondItem="Baf-iY-6eS" secondAttribute="trailing" id="MFs-Bq-u1E"/>
-                            <constraint firstItem="Pmp-g3-0l3" firstAttribute="top" secondItem="geM-Wi-Ob5" secondAttribute="bottom" id="Ngs-6n-xuW"/>
                             <constraint firstItem="geM-Wi-Ob5" firstAttribute="top" secondItem="Baf-iY-6eS" secondAttribute="bottom" id="O4W-hd-2Jq"/>
-                            <constraint firstItem="Pmp-g3-0l3" firstAttribute="bottom" secondItem="eoO-0n-PTz" secondAttribute="bottom" id="Wah-aY-UjA"/>
+                            <constraint firstItem="geM-Wi-Ob5" firstAttribute="bottom" secondItem="eoO-0n-PTz" secondAttribute="bottom" id="Qwv-2B-xCJ"/>
                             <constraint firstItem="Baf-iY-6eS" firstAttribute="top" secondItem="eoO-0n-PTz" secondAttribute="top" id="Xtb-9a-t1C"/>
-                            <constraint firstItem="Pmp-g3-0l3" firstAttribute="leading" secondItem="eoO-0n-PTz" secondAttribute="leading" id="e1u-vy-D7w"/>
                             <constraint firstItem="Baf-iY-6eS" firstAttribute="leading" secondItem="eoO-0n-PTz" secondAttribute="leading" id="e7H-52-tvG"/>
-                            <constraint firstItem="eoO-0n-PTz" firstAttribute="trailing" secondItem="Pmp-g3-0l3" secondAttribute="trailing" id="nwX-3Y-CfE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eoO-0n-PTz"/>
                     </view>
                     <connections>
-                        <outlet property="bottomHeight" destination="os4-4n-tZv" id="kkZ-Eg-stC"/>
                         <outlet property="tableView" destination="geM-Wi-Ob5" id="tgf-Ut-4OB"/>
                     </connections>
                 </viewController>
