@@ -63,8 +63,8 @@ extension ClientViewController: UITableViewDataSource {
         if let textField = field as? FIeldTextInput{
             let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIER_TEXT, for: indexPath) as! CellTextInput
             cell.fieldModel = textField
-            cell.onFocus = {(focusedIndexPath) in
-                self.focusedIndexPath = focusedIndexPath
+            cell.onFocus = {(cell) in
+                self.focusedIndexPath = tableView.indexPath(for: cell)
             }
             return cell
         } else if field is FieldSaveButton{
