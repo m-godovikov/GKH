@@ -1,0 +1,16 @@
+PODS:
+  - GSImageViewerController (1.4.2)
+
+DEPENDENCIES:
+  - GSImageViewerController
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GSImageViewerController
+
+SPEC CHECKSUMS:
+  GSImageViewerController: 38b1aabbc8ca0ffad2b38c67768bcc9248287375
+
+PODFILE CHECKSUM: b0f7fe3a648655013392402ec5724221627f8d6a
+
+COCOAPODS: 1.5.3

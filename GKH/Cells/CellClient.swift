@@ -10,6 +10,12 @@ import UIKit
 
 class CellClient: UITableViewCell {
 
+    @IBAction func onTapImage1(_ sender: Any) {
+        imageTapListener?(imageView1)
+    }
+    @IBAction func onTapImage2(_ sender: Any) {
+        imageTapListener?(imageView2)
+    }
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -19,6 +25,8 @@ class CellClient: UITableViewCell {
     @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var imageView2: UIImageView!
     @IBOutlet weak var totalLabel: UILabel!
+    
+    var imageTapListener: ((UIImageView) -> Void)? = nil
     
     func setClientMoney(clientMoney: ClientMoney){
         dateLabel.text = dateToString(date: clientMoney.date)

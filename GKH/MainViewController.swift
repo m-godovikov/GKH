@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GSImageViewerController
 
 class MainViewController: UIViewController {
     
@@ -57,7 +58,17 @@ extension MainViewController: UITableViewDataSource {
         let client = clients[indexPath.row] as! ClientData
         let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIER_CLIENT, for: indexPath) as! CellClient
         cell.setClientMoney(clientMoney: ClientMoney(clientData: client, tarif: tarif))
+        cell.imageTapListener = showImage
         return cell
+    }
+    
+    private func showImage(imageView: UIImageView){
+        if let image = imageView.image{
+            let imageInfo      = GSImageInfo(image: image, imageMode: .aspectFill)
+            let transitionInfo = GSTransitionInfo(fromView: imageView)
+            let imageViewer    = GSImageViewerController(imageInfo: imageInfo, transitionInfo: transitionInfo)
+            present(imageViewer, animated: true, completion: nil)
+        }
     }
 }
 
