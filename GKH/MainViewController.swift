@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     private let IDENTIFIER_CLIENT = "IDENTIFIER_CLIENT"
     
     @IBOutlet weak var tableView: UITableView!
-    private let tarif = Tarif()
+    private var tarif = Tarif()
     private let clients = NSMutableArray()
     
     
@@ -40,7 +40,8 @@ extension MainViewController {
         } else if segue.identifier == "tarif"{
             let tarifViewController = segue.destination as! TarifViewController
             tarifViewController.tarif = self.tarif
-            tarifViewController.update = {() -> Void in
+            tarifViewController.update = {(newTarif) -> Void in
+                self.tarif = newTarif
                 self.tableView.reloadData()
             }
         }

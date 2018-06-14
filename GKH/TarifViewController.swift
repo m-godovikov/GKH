@@ -20,10 +20,11 @@ class TarifViewController: UIViewController {
 
     @IBAction func save() {
         if let cold = Double(coldLabel.text!), let hot = Double(hotLabel.text!), let electricity = Double(electricityLabel.text!){
-            tarif.cold = cold
-            tarif.hot = hot
-            tarif.electricity = electricity
-            update()
+            let newTarif = Tarif()
+            newTarif.cold = cold
+            newTarif.hot = hot
+            newTarif.electricity = electricity
+            update(newTarif)
             goBack()
         } else {
             let alertController = UIAlertController(title: "Ошибка", message:
@@ -34,7 +35,7 @@ class TarifViewController: UIViewController {
         }
     }
     
-    var update: (() -> Void)!
+    var update: ((Tarif) -> Void)!
 
     
     var tarif: Tarif!
